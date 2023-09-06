@@ -3,10 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Basic Utility</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Pacifico&family=Work+Sans:wght@100;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>    
+        <script>
+            tailwind.config = {
+            theme: {
+                extend: {
+                    spacing : {
+                        13: '3.25rem'
+                    },
+                    fontFamily: {
+                        inter : ['Inter'],
+                        pacifico :['Pacifico']    
+                    },
+                    colors:{
+                        ridwan : '#bada55'
+                    }
+                }
+            }
+            }
+        </script>
+      <title>Basic Utility</title>
+
 </head>
 <body>
-    <h1 class="text-center h-1">Haloo dunia</h1>
+    <div>
+        <h1 class="text-center text-8xl font-bold my-10">Mari Belajar <span class="bg-clip-text bg-gradient-to-br from-blue-800 to-teal-300 text-transparent">tailwindCSS</span></h1>
+    </div>
+        
+    <section class="mb-10 bg-gradient-to-br from-indigo-600 via-red-500 to-orange-500">
+        <h2 class="text-center text-3xl">spacing</h2>
+        <div class="m-13 bg-red-400">margin</div>
+        <div class="p-4 bg-orange-400"> Padding </div>
+    </section>
+    <section class="mb-10 bg-ridwan">
+        <h2 class="text-3xl text-center">sizing</h2>
+        <div class="w-32 h-32 bg-fuchsia-300">kotak 1</div>
+    </section>
+    <section class="mb-96 font-inter max-w-3xl mx-auto">
+        <h2 class="mb-2 text-4xl font-bold">Belajar mengenal typograpy di tailwindcss </h2>
+        <div class="mb-4 text-lg">by Ridwan Setio Budi, 2 januari 2023</div>
+        <p class="mb-4">Lorem ipsum dolor sit amet <a href="http://" class="underline font-semibold text-blue-600">consectetur</a> adipisicing elit. Nobis dignissimos, ducimus adipisci voluptatibus repellat aperiam reprehenderit, nulla ipsum exercitationem, quasi corrupti! Iste similique esse beatae, eligendi itaque voluptatibus. Voluptatibus corrupti magni, dolores non laboriosam culpa commodi quae, suscipit ullam, neque quam consequuntur et. Magnam tempora laboriosam officiis quia neque commodi.</p>
+        <blockquote class="mb-4 italic font-thin">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis ipsam officiis eaque temporibus sed laboriosam eum illum quaerat fugit rem."</blockquote>
+    </section>
 </body>
 </html>
